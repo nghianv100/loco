@@ -4,3 +4,11 @@ spring:
       enabled: true
   application:
     name: loco
+
+docker:
+  host: unix:///Users/nghianguyen/.docker/run/docker.sock
+
+components:
+  redis:
+    version: 7.4.7
+    explicitImage: registry-1.docker.io/library/redis:${components.redis.version}
